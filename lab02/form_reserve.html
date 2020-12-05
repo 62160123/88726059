@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hotel Booking</title>
+</head>
+<body>
+ <h3>Hotel Booking</h3>
+    <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php"></form>
+    <table border="0">
+        <tr>
+            <td><label for="RoomType">Room Type</label></td>
+            <td><select name="RoomType" style="width:100%">
+            <option value="0">Please Select</option>
+            <option value="1">Standard</option>
+            <option value="2">Luxury</option>
+            <option value="3">Deluxe</option></td>
+            </select>
+            <td><br>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><label for="NumberOfGuests">Number Of Guests</label></td>
+            <td><select name="NumberOfGuests" style="width:100%">
+            <option value="0">Please Select</option>
+            <option value="1-2">1-2</option>
+            <option value="3-4">3-4</option>
+            <option value="5-6">5-6</option>
+             <option value="6-7">6-7</option></td>
+           </select>
+        </tr>
+        <tr>
+                <td><label for="name">Name</label></td>
+                <td> <input type="text" name="fname" id="fname" placeholder="First" style="width:47%">
+                    <input type="text" name="lname" id="lname" placeholder="Last" style="width:47%"></td>
+                    <td><br>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td> <input type="text" name="email" id="email" placeholder="john@company.com" style="width:97.8%"></td>
+        </tr>
+        <tr>
+            <td><label for="arrival">Arrival</label></td>
+            <td> 
+                <input type="date" name="arrivaldate" id="arrivaldate">
+                <input type="time" name="arrivaltime" id="arrivaltime">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="departure">Departure</label></td>
+            <td> 
+                <input type="date" name="departuredate" id="departuredate">
+                <input type="time" name="departuretime" id="departuretime">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="sex">Free Pickup</label></td>
+            <td><input type="radio" name="sex" id="sex" value="Yes">Yes, Sure!<br>
+            <input type="radio" name="sex" id="sex" value="No">No, I already rented a car.</td>
+        </tr>
+        <tr>
+            <td><label for="FightNumber">Fight Number</label></td>
+            <td> <input type="text" name="fightnum" id="fightnum" placeholder="C1209" style="width:97.8%"></td>
+        </tr>
+        <tr>
+            <td style="float:left;">Other request</td>
+            <td><textarea name="commmet" id="comment" rows="5" cols="50"></textarea></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
