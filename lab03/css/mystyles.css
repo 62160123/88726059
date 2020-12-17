@@ -1,0 +1,14 @@
+body {
+    font-family: Helvetica ;
+    background-image: url("https://sv1.picz.in.th/images/2020/12/17/jCfK41.jpg");
+    width:90%;
+}
+
+h1 {
+    color: rgb(26, 38, 209);
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
