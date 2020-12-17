@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess</title>
+    <title>Random Number</title>
 </head>
 <body>
-    <input type="text" id="num"><br>
-    <button onclick="myFunction()">Enter</button>
-    <p id="demo"></p>
+    <input type="text" id="num" >
+    <input type="button" onclick="yournum()" value="Enter"/><br/>
+    <input type="button" onclick="reset()" value="New Random"/><br/>
+    <br>
+    <textarea id="output" rows="50" style="width:1.8cm;"></textarea>
 
     <script>
         rd = Math.floor(Math.random()*100);
-        
-        function myFunction(){
-            var g = document.getElementById("num").value;
-            document.getElementById("demo").innerHTML = g;
+
+        function yournum() {
+            num = document.getElementById("num").value;
+            numrd = document.getElementById("output");
+        if (num == rd) {
+            numrd.value = numrd.value + "("+num+")ถูกต้อง ";
+        } else if (num > rd) {
+            numrd.value = numrd.value + "("+num+")มากไป ";
+        } else if (num < rd){
+            numrd.value = numrd.value + "("+num+")น้อยไป ";
+                }
+        }
+        function reset(){
+            rd = Math.floor(Math.random()*100);
         }
     </script>
+  </body>
 </body>
 </html>
