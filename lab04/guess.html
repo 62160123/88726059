@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess</title>
+</head>
+<body>
+    <input type="text" id="num"><br>
+    <button onclick="myFunction()">Enter</button>
+    <p id="demo"></p>
+
+    <script>
+        rd = Math.floor(Math.random()*100);
+        
+        function myFunction(){
+            var g = document.getElementById("num").value;
+            document.getElementById("demo").innerHTML = g;
+        }
+    </script>
+</body>
+</html>
