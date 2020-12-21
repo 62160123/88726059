@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Number</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Number_GuessingGame</title>
 </head>
-<body>
-    <input type="text" id="text" placeholder="?">
-    <button onclick="Num()">Enter</button>
-    <button onclick="Reset()">Reset</button>
-    <div id="show1"></div>
-    <div id="show2"></div>
-
+<body class="bg-warning">
+      <div class="container">
+      <h2 class="page-header">Number-Guessing-Game <span class="glyphicon glyphicon-gift"></span></h2>
+        <input type="text" id="text" placeholder="?">
+        <a href="#" data-toggle="tooltip" title=":)"><button onclick="Num()" class="btn btn-success">Enter</button></a>
+        <a href="#" data-toggle="tooltip" title="Play again"><button onclick="Reset()" class="btn btn-primary">Reset</button></a>
+        <div id="show1"></div>
+        <div id="show2"></div>
+      </div>
+ 
     <script>
         rd = Math.floor(Math.random()*100);
         
@@ -34,6 +38,9 @@
         rd = Math.floor(Math.random()*100); 
       }
     </script>
-  </body>
+    <div class="container-fluid">
+        <!-- A fluid container that uses the full witdh -->
+    </div>
 </body>
 </html>
+
