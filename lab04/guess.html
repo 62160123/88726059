@@ -6,29 +6,33 @@
     <title>Random Number</title>
 </head>
 <body>
-    <input type="text" id="num" >
-    <input type="button" onclick="yournum()" value="Enter"/><br/>
-    <input type="button" onclick="reset()" value="New Random"/><br/>
-    <br>
-    <textarea id="output" rows="50" style="width:1.8cm;"></textarea>
+    <input type="text" id="text" placeholder="?">
+    <button onclick="Num()">Enter</button>
+    <button onclick="Reset()">Reset</button>
+    <div id="show1"></div>
+    <div id="show2"></div>
 
     <script>
         rd = Math.floor(Math.random()*100);
+        
+      function Num(){
+        text = document.getElementById('text').value;
+        document.getElementById('show1').innerHTML += text +" ";
+        if(text == rd){
+            document.getElementById('show2').innerHTML = "ถูกต้อง";
+        } else if(text < rd){
+            document.getElementById('show2').innerHTML = "น้อยไป";
+        } else{
+            document.getElementById('show2').innerHTML = "มากไป";
+        }
+      }
 
-        function yournum() {
-            num = document.getElementById("num").value;
-            numrd = document.getElementById("output");
-        if (num == rd) {
-            numrd.value = numrd.value + "("+num+")ถูกต้อง ";
-        } else if (num > rd) {
-            numrd.value = numrd.value + "("+num+")มากไป ";
-        } else if (num < rd){
-            numrd.value = numrd.value + "("+num+")น้อยไป ";
-                }
-        }
-        function reset(){
-            rd = Math.floor(Math.random()*100);
-        }
+      function Reset(){
+        document.getElementById('text').value="";
+        document.getElementById('show1').innerHTML ="";
+        document.getElementById('show2').innerHTML ="";
+        rd = Math.floor(Math.random()*100); 
+      }
     </script>
   </body>
 </body>
