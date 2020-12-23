@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program_Hello</title>
+</head>
+<body>
+    <h4>1. โปรแกรม ทักทาย - hello.html</h4>
+    <input type="text" id="text" oninput="myFunction()">
+    <div id="show"></div>
+
+    <script>
+        function myFunction() {
+            text = document.getElementById("text").value;
+            document.getElementById("show").innerHTML = "Hello " + text;
+        }
+    </script>
+</body>
+</html>
