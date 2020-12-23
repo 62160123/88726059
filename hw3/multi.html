@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication_table</title>
+</head>
+<body>
+
+    <h4>2. โปรแกรม สูตรคูณ - multi.html</h4>
+    <input type="text" id="text" oninput="multi()" placeholder="สูตรคูณแม่ X">
+    <table>
+    <tr>
+        <td>
+            <m id="show"></m>
+        </td>
+        <td>
+            <m id="ans"></m>
+        </td>
+    </tr>
+    </table>
+
+        <script> 
+        function multi(){
+            text = document.getElementById("text").value;
+            var x="";
+            var z="";
+                for(i=1;i<=12;i++) {
+                    ans = text * i;
+                    x +=  text + " x " + i +"<br>";
+                    z += " = "+ ans +"<br>";
+                }
+                document.getElementById("show").innerHTML = x;
+                document.getElementById("ans").innerHTML = z;
+        }
+        </script>
+</body>
+</html>
