@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add song</title>
+</head>
+<body>
+    <h3>Add new song</h3>
+    <input type="text" id="name" placeholder="ชื่อเพลง"><br>&nbsp;<br>
+    <input type="text" id="artist" placeholder="ศิลปิน"><br>&nbsp;<br>
+    <textarea id="song" rows="9" cols="70" placeholder="เนื้อร้อง"></textarea><br>
+    <button onclick="Save()">Save</button>
+    <button onclick="ClearForm()">Clear Form</button>
+
+    <script>
+        store = [];
+        function Save() {
+        store.push([document.getElementById("name").value
+                  ,document.getElementById("artist").value
+                  ,document.getElementById("song").value]);
+       
+        localStorage.setItem("set", JSON.stringify(store));
+
+        document.getElementById("name").value = "";
+        document.getElementById("artist").value = "";
+        document.getElementById("song").value = "";
+    }
+        function ClearForm() {
+        document.getElementById("name").value = "";
+        document.getElementById("artist").value = "";
+        document.getElementById("song").value = "";
+    }
+    </script>
+</body>
+</html>
