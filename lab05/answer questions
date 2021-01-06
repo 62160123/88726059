@@ -1,0 +1,27 @@
+• event onLoad เกิดขึ้นเมื่อไหร่
+= เกิดหลังจากที่มีการโหลดข้อมูลหรือคอนโทรลนั้นสมบูรณ์แล้ว
+
+• event onSubmit เกิดขึ้นเมื่อไหร่
+= เกิดขึ้นเมื่อมีการกดที่ปุ่ม Submit ของ Form หรือ Form เกิดการ Submit
+
+• attribute name ของแทก form, input มีไว้เพื่ออะไร
+= มีไว้กำหนดให้แต่ละค่าไม่ซ้ำกัน
+
+• ประโยคคำสั่ง var uid = document.registform.userid; คืออะไร
+= คืนค่าข้อมูลที่ uid มี
+
+• .focus() คืออะไร
+= เพื่อให้ไปสนใจสิ่งๆนั้น
+
+• regular expression คืออะไร
+    var illegalChars = /\W/
+    illegalChars.test(uid.value)
+    passid.value.search(/[a-zA-Z]+/) == -1
+    uname.value.match(letters)
+= การกำหนดรูปแบบหรือกลุ่มคำ เพื่อเอาไว้ใช้ค้นหาข้อความต่างๆตามที่เราต้องการ
+
+• ความเข้าใจต่อ code ต่อไปนี้
+    var usex = document.registform.sex;
+    usex.length
+    usex[i].checked
+= คืนค่าที่เก็บไว้ใน usex แล้วดูความยาวและเช็คอาร์เรย์
