@@ -1,0 +1,36 @@
+<h4>Search</h4>
+<input type="text" id="kw">
+<button onclick="search()">Search</button>
+<div id="disp"></div>
+
+<script>
+    function search(){
+        kw = document.getElementById('kw').value;
+        var typ = "";
+        //alert(kw);
+        console.log("kw=" +kw);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+                //document.getElementById('disp').innerHTML = this.responseText;
+                arr = JSON.parse(this.responseText);
+                console.log(arr);
+                if(arr.length == 0){
+                    document.getElementById('disp').innerHTML = "Not found";
+                } else {
+                    html ="";
+                    for (i = 0; i < arr.length; i++) {
+                        html += arr[i].musicName +", "+ arr[i].musicLenght +", "+ arr[i].albumName +", "+ arr[i].artistID +"<br>";
+                    }
+                    document.getElementById('disp').innerHTML = html;
+                }
+            }
+        }
+        parameters = "kw=" + kw;
+        xmlhttp.open("post", "postsearchh.php");
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send(parameters);
+    }
+</script>
+
+
